@@ -1,390 +1,1016 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPER KINTA D系列 安裝教學【D系列直上 | D系列直插全面適用】</title>
-    <link href="https://live.staticflickr.com/65535/53863054259_f8814e0fb4_o.png" rel="icon" type="image/x-icon">
-
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #2c3e50, #4ca1af);
-            color: #fff;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px 0;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-bottom: 2px solid #007BFF;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #fff;
-        }
-
-        .tutorials {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .tutorial {
-            background-color: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            margin: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            width: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .tutorial:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-        }
-
-        .tutorial i {
-            font-size: 5em;
-            margin-bottom: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .tutorial:hover i {
-            transform: scale(1.1);
-        }
-
-        button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin-top: 10px;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.7);
-            padding-top: 60px;
-        }
-
-        .modal-content {
-            background-color: #333;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .modal-content h2 {
-            color: #fff;
-        }
-
-        .modal-content input {
-            padding: 10px;
-            margin: 10px 0;
-            width: 80%;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
-
-        .submit-btn {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: #218838;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: white;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 0.5s;
-          }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台中新動力 SUPER KINTA LED 安裝教學 - 專業的品質</title>
+  <link href="https://live.staticflickr.com/65535/53863054259_f8814e0fb4_o.png" rel="icon" type="image/x-icon">
+  <!-- 引入 Google Fonts 與 FontAwesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* =====================================
+       CSS 變數：配色設定
+    ===================================== */
+    :root {
+      --nav-bg: #1a1a1a;
+      --logo-color: #4FD1C5;
+      --link-color: #ffffff;
+      --link-hover: #f6ad55;
+      --header-gradient: linear-gradient(135deg, #2a2a72, #009ffd);
+      --header-text: #ffffff;
+      --typed-border: #f6ad55;
+      --main-bg: #ffffff;
+      --main-text: #333333;
+      --section-border: #2a2a72;
+      --section-accent: #f6ad55;
+      --card-bg: #f7f7f7;
+      --card-border: #009ffd;
+      --button-bg: #009ffd;
+      --button-hover: #007acc;
+      --modal-bg: #1a1a1a;
+      --modal-border: #009ffd;
+    }
+    
+    /* =====================================
+       重設與全域樣式
+    ===================================== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { 
+      height: 100%; 
+      font-family: 'Montserrat', sans-serif; 
+      background-color: #1a1a1a; 
+      color: #fff; 
+    }
+    a { text-decoration: none; color: inherit; }
+    
+    /* =====================================
+       固定頂部導覽列
+    ===================================== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--nav-bg);
+      padding: 15px 30px;
+      z-index: 1000;
+    }
+    nav .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: var(--logo-color);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li { margin-left: 30px; }
+    nav ul li a {
+      font-size: 1em;
+      color: var(--link-color);
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover { color: var(--link-hover); }
+    
+    /* =====================================
+       頁首 Hero 區塊
+         - 背景採用漸層效果，內含 Canvas 粒子特效與打字機效果（文字淡入）
+    ===================================== */
+    header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: var(--header-gradient);
+      padding-top: 70px; /* 避免被 nav 遮蔽 */
+    }
+    /* Canvas 粒子特效背景 */
+    #particle-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      color: var(--header-text);
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+    header p {
+      font-size: 1.5em;
+      margin-bottom: 40px;
+      color: var(--header-text);
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 1s;
+    }
+    /* 打字機效果：右側光標 */
+    .typed {
+      display: inline;
+      border-right: 2px solid var(--typed-border);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* =====================================
+       主內容區：品牌介紹、FAQ、聯絡我們
+         - 主內容使用白底與深色字體，內容詳盡易懂
+    ===================================== */
+    main {
+      padding: 100px 20px;
+      background: var(--main-bg);
+      color: var(--main-text);
+    }
+    main section {
+      max-width: 800px;
+      margin: 0 auto 100px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-out;
+    }
+    main section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    main section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      border-bottom: 3px solid var(--section-border);
+      padding-bottom: 10px;
+      text-align: center;
+      position: relative;
+    }
+    main section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 5px;
+      background: var(--section-accent);
+    }
+    main section p, main section li {
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+    main section ul, main section ol {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    
+    /* =====================================
+       安裝教學 區塊 (玻璃質感卡片風格)
+    ===================================== */
+    #installation {
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+      color: var(--main-text);
+      text-align: center;
+    }
+    #installation p {
+      margin-bottom: 30px;
+      font-size: 1.1em;
+    }
+    #installation .tutorials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+    }
+    #installation .tutorial {
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid var(--card-border);
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    #installation .tutorial:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    #installation .tutorial i {
+      font-size: 3.2em;
+      margin-bottom: 15px;
+      color: var(--card-border);
+    }
+    #installation .tutorial button {
+      margin-top: 15px;
+      background: var(--button-bg);
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #installation .tutorial button:hover {
+      background: var(--button-hover);
+    }
+    #installation .tutorial p {
+      margin-top: 15px;
+      font-size: 1em;
+      color: #555;
+    }
+    
+    /* =====================================
+       發展時間軸 區塊 (2017 ~ 2025)
+    ===================================== */
+    #timeline {
+      padding: 60px 20px;
+      background: var(--main-bg);
+      color: var(--main-text);
+      text-align: center;
+    }
+    #timeline h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      border-bottom: 3px solid var(--section-border);
+      padding-bottom: 10px;
+      position: relative;
+    }
+    .timeline-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    .timeline-container::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: var(--card-border);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    .timeline-item {
+      padding: 20px 30px;
+      position: relative;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      width: 45%;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: var(--card-bg);
+      border: 4px solid var(--card-border);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+    }
+    .timeline-item.left::after {
+      right: -13px;
+    }
+    .timeline-item.right {
+      left: 55%;
+      text-align: left;
+    }
+    .timeline-item.right::after {
+      left: -13px;
+    }
+    .timeline-year {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: var(--card-border);
+    }
+    
+    /* =====================================
+       FAQ 區塊 (手風琴效果)
+    ===================================== */
+    #faq {
+      padding: 80px 20px;
+      background: #f7f7f7;
+      color: #333;
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    #faq h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .faq-item {
+      border-bottom: 1px solid #ccc;
+      padding: 15px 0;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+    .faq-item:hover {
+      background: #e9e9e9;
+    }
+    .faq-item h3 {
+      font-size: 1.3em;
+      position: relative;
+      padding-right: 25px;
+    }
+    .faq-item h3::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1.3em;
+    }
+    .faq-item.active h3::after {
+      content: "-";
+    }
+    .faq-item p {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      margin-top: 0;
+    }
+    .faq-item.active p {
+      max-height: 200px;
+      margin-top: 10px;
+    }
+    
+    /* =====================================
+       聯絡我們 區塊 (全新設計)
+    ===================================== */
+    #contact {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #f6ad55, #fbd38d);
+      color: #333;
+      text-align: center;
+    }
+    #contact .contact-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    #contact h2 {
+      margin-bottom: 20px;
+      color: #2a2a72;
+    }
+    #contact p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+    #contact ul {
+      list-style: none;
+      padding: 0;
+    }
+    #contact li {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    #contact a {
+      color: var(--button-bg);
+      text-decoration: underline;
+      transition: color 0.3s;
+    }
+    #contact a:hover {
+      color: var(--button-hover);
+    }
+    
+    /* =====================================
+       頁尾
+    ===================================== */
+    footer {
+      background: #000;
+      color: #777;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    footer p { font-size: 0.9em; }
+    
+    /* =====================================
+       Modal 樣式 (密碼輸入 & 自訂警告)
+    ===================================== */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      padding: 20px;
+    }
+    .modal {
+      background: var(--modal-bg);
+      padding: 30px;
+      border: 2px solid var(--modal-border);
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      position: relative;
+    }
+    .modal h2 {
+      color: var(--modal-border);
+      margin-bottom: 20px;
+    }
+    .modal input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid var(--modal-border);
+      border-radius: 5px;
+      background: #333;
+      color: #fff;
+    }
+    .modal button {
+      background: var(--modal-border);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .modal button:hover {
+      background: var(--button-hover);
+    }
+    .modal .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5em;
+      color: var(--modal-border);
+      cursor: pointer;
+    }
+    
+    /* =====================================
+       響應式調整
+    ===================================== */
+    @media(max-width: 768px) {
+      header h1 { font-size: 2.5em; }
+      header p { font-size: 1.2em; }
+      nav ul li { margin-left: 20px; }
       
-          .modal-content {
-            background-color: #333;
-            color: #fff;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
-            border-radius: 10px;
-            text-align: center;
-            animation: slideIn 0.5s;
-          }
-      
-          .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-          }
-      
-          .close:hover,
-          .close:focus {
-            color: #fff;
-            text-decoration: none;
-            cursor: pointer;
-          }
-      
-          @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-          }
-      
-          @keyframes slideIn {
-            from { transform: translateY(-50px); }
-            to { transform: translateY(0); }
-          }
-    </style>
-    <body>
-        <div id="customAlertModal" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeCustomAlertModal()">&times;</span>
-            <p id="modalMessage"></p>
-          </div>
-        </div>
-    <!-- 加載FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      /* 修改時間軸：改為單欄顯示 */
+      .timeline-container::after { left: 20px; }
+      .timeline-item {
+        width: 100%;
+        margin: 20px 0;
+        padding-left: 40px;
+        text-align: left;
+      }
+      .timeline-item.left, .timeline-item.right { left: 0; }
+      .timeline-item::after { left: -33px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>SUPER KINTA D系列 安裝教學<br>【D系列直上 | D系列直插 適用本店產品】</h1>
-        </header>
-        <main>
-            <div class="tutorials">
-                <div class="tutorial">
-                    <i class="fas fa-tools"></i>
-                    <button onclick="openPasswordEntry('D1S-D3S-卡榫')">D1S D3S 兩邊卡榫</button>
-                    </div>
-                    <div class="tutorial">
-                        <i class="fas fa-tools"></i>
-                        <button onclick="openPasswordEntry('D1S-D3S-黑盒固定')">D1S D3S 外有小黑盒固定</button>
-                    </div>
-                    <div class="tutorial">
-                        <i class="fas fa-tools"></i>
-                        <button onclick="openPasswordEntry('D2S-D4S-閃光效果')">D2S D4S 閃光效果解決方案</button>
-                    </div>
-                    <div class="tutorial">
-                        <i class="fas fa-tools"></i>
-                        <button onclick="openPasswordEntry('D1S-D3S-有卡扣')">D1S D3S 有卡扣</button>
-                    </div>
-                    <div class="tutorial">
-                        <i class="fas fa-tools"></i>
-                        <button onclick="openPasswordEntry('D1S-D3S-無卡扣')">D1S D3S 無卡扣</button>
-                    </div>
-                    <div class="tutorial">
-                        <i class="fas fa-tools"></i>
-                        <button onclick="openPasswordEntry('D1S-D3S-黑色卡扣')">D1S D3S 需拆解原本的黑色卡扣</button>
-                    </div>
-                    <div class="tutorial">
-                        <i class="fas fa-tools"></i>
-                        <button onclick="openPasswordEntry('D2S-D4S-通用教學')">D2S D4S 通用教學</button>
-                    </div>
-                    <div class="tutorial">
-                        <i class="fas fa-tools"></i>
-                        <button onclick="openPasswordEntry('D1S-D3S-特殊卡蓋')">D1S D3S 需要特殊卡蓋</button>
-                    </div>
-                    <div class="tutorial">
-                        <i class="fas fa-tools"></i>
-                        <button onclick="openPasswordEntry('D1S-D3S-拆掉小卡扣')">D1S D3S 拆掉小卡扣</button>
-                    </div>
-                    <div class="tutorial">
-                        <i class="fas fa-tools"></i>
-                        <button onclick="openPasswordEntry('D1S-D3S-卡榫外')">D1S D3S 兩邊卡榫外</button>
-                    </div>
-                    </div>
-        </main>
-        <footer>
-            <p>&copy; 2024 SUPER KINTA. 保留所有權利，盜用必究。</p>
-        </footer>
+  <!-- =====================================
+       導覽列
+  ===================================== -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">台中新動力 汽車LED大燈</div>
+      <ul>
+        <li><a href="#background">品牌介紹</a></li>
+        <li><a href="#installation">安裝教學</a></li>
+        <li><a href="#timeline">發展時間軸</a></li>
+        <li><a href="#faq">常見問題</a></li>
+        <li><a href="#contact">聯絡我們</a></li>
+      </ul>
     </div>
+  </nav>
+  
+  <!-- =====================================
+       頁首 Hero 區塊 (粒子特效 + 打字機效果)
+  ===================================== -->
+  <header>
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-content">
+      <h1 id="hero-title"></h1>
+      <p class="typed" id="hero-tagline"></p>
+    </div>
+  </header>
+  
+  <!-- =====================================
+       主內容區
+  ===================================== -->
+  <main>
+    <!-- 品牌介紹 -->
+    <section id="background">
+      <h2 style="color: red; font-size: 32px; font-weight: bold; text-align: center; margin-top: 20px;">
+        📢 重要聲明 📢
+      </h2>
+      <p style="color: red; font-size: 24px; font-weight: bold; text-align: center;">
+        本店【台中新動力】與蝦皮上的 <span style="text-decoration: underline;">中國品牌「鯨特」</span> 毫無任何關聯，請勿混淆！  
+        我們的包裝設計、產品內容與品質標準皆與中國品牌『鯨特』截然不同，特此聲明，敬請悉知。
+      </p>
+      
+      <h2>品牌介紹</h2>
+      <p>
+        2024年，由台中新動力傾力創辦的 <strong>SUPER KINTA 汽車 LED 大燈</strong>，完美詮釋了台灣本土創新精神與卓越品質。我們憑藉多年團隊累積的技術經驗與專業研發實力，持續在產品設計、生產及嚴格品質控管上精益求精，致力於為每位車主提供先進且穩定的照明體驗。
+      </p>
+      <p>
+        <strong>為感謝所有支持台中新動力汽車 LED 大燈的朋友們</strong>，SUPER KINTA 精心製作了本 LED 安裝教學網頁，詳細介紹本體特點、安裝步驟及最佳光型調整，幫助您輕鬆上手，確保車燈穩定運作。
+      </p>
+      <p>
+        若在安裝過程中有任何疑問，歡迎參考 FAQ 區塊或直接聯絡客服，獲得即時專業協助。
+      </p>
+      
+      
+    </section>
+    
+<!-- 安裝教學 -->
+<section id="installation">
+  <h2>安裝教學</h2>
+  <p>
+    請依照下列教學步驟操作，每項教學皆提供專屬影片（觀看前需輸入密碼驗證身份），確保資訊僅提供給台中新動力客戶觀賞。
+  </p>
+  <div class="tutorials">
+    <div class="tutorial">
+      <i class="fas fa-tools"></i>
+      <button onclick="openPasswordEntry('D1S-D3S-卡榫')">D1S D3S 兩邊卡榫</button>
+    </div>
+    <div class="tutorial">
+      <i class="fas fa-tools"></i>
+      <button onclick="openPasswordEntry('D1S-D3S-黑盒固定')">D1S D3S 外有小黑盒固定</button>
+    </div>
+    <div class="tutorial">
+      <i class="fas fa-tools"></i>
+      <button onclick="openPasswordEntry('D2S-D4S-閃光效果')">D2S D4S 閃光效果解決方案</button>
+    </div>
+    <div class="tutorial">
+      <i class="fas fa-tools"></i>
+      <button onclick="openPasswordEntry('D1S-D3S-有卡扣')">D1S D3S 有卡扣</button>
+    </div>
+    <div class="tutorial">
+      <i class="fas fa-tools"></i>
+      <button onclick="openPasswordEntry('D1S-D3S-無卡扣')">D1S D3S 無卡扣</button>
+    </div>
+    <div class="tutorial">
+      <i class="fas fa-tools"></i>
+      <button onclick="openPasswordEntry('D1S-D3S-黑色卡扣')">D1S D3S 需拆解原本的黑色卡扣</button>
+    </div>
+    <div class="tutorial">
+      <i class="fas fa-tools"></i>
+      <button onclick="openPasswordEntry('D2S-D4S-通用教學')">D2S D4S 通用教學</button>
+    </div>
+    <div class="tutorial">
+      <i class="fas fa-tools"></i>
+      <button onclick="openPasswordEntry('D1S-D3S-特殊卡蓋')">D1S D3S 需要特殊卡蓋</button>
+    </div>
+    <div class="tutorial">
+      <i class="fas fa-tools"></i>
+      <button onclick="openPasswordEntry('D1S-D3S-拆掉小卡扣')">D1S D3S 拆掉小卡扣</button>
+    </div>
+    <div class="tutorial">
+      <i class="fas fa-tools"></i>
+      <button onclick="openPasswordEntry('D1S-D3S-卡榫外')">D1S D3S 兩邊卡榫外</button>
+    </div>
+  </div>
+</section>
 
-    <!-- 密碼輸入模態框 -->
-    <div id="passwordModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closePasswordModal()">&times;</span>
-            <h2>請輸入密碼以觀看 <span id="tutorialType"></span> 教學</h2>
-            <input type="password" id="password" placeholder="輸入密碼">
-            <button class="submit-btn" onclick="checkPassword()">提交</button>
+    
+    <!-- 發展時間軸 -->
+    <section id="timeline">
+      <h2>發展時間軸</h2>
+      <div class="timeline-container">
+        <div class="timeline-item left">
+          <div class="timeline-year">2017</div>
+          <div class="timeline-content">
+            <h3>本店創始成立</h3>
+            <p>
+              2017年，我們創立了本店，專注於母嬰用品與電池等產品的銷售，為未來發展奠定堅實基礎。
+            </p>
+          </div>
         </div>
+        <div class="timeline-item right">
+          <div class="timeline-year">2018</div>
+          <div class="timeline-content">
+            <h3>產品銷量突破，好評連連</h3>
+            <p>
+              2018年，憑藉專業服務與優質產品，我們的銷量持續攀升，獲得了廣大客戶的一致認可與好評。
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-year">2019</div>
+          <div class="timeline-content">
+            <h3>市場銷量第一</h3>
+            <p>
+              2019年，我們的產品銷量大幅突破，成功登上蝦皮排行榜榜首，確立了市場領導地位。
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-content">
+            <h3>導入虛擬商品服務</h3>
+            <p>
+              2020年，我們拓展業務版圖，推出涵蓋遊戲外掛、YouTube、Instagram、Facebook粉絲訂閱及直播等虛擬商品服務，展現創新思維。
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-year">2021</div>
+          <div class="timeline-content">
+            <h3>用戶體驗升級</h3>
+            <p>
+              2021年，我們全面優化出貨檢測與售後服務，進一步提升用戶體驗，廣受顧客好評。
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-year">2022</div>
+          <div class="timeline-content">
+            <h3>品牌升級</h3>
+            <p>
+              2022年，我們重新塑造品牌形象，推出多項創新服務與新產品，進一步強化市場競爭力。
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-year">2023</div>
+          <div class="timeline-content">
+            <h3>市場冠軍</h3>
+            <p>
+              2023年，我們在母嬰用品與電池領域穩居市場冠軍地位，持續引領行業發展趨勢。
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-content">
+            <h3>創立 SUPER KINTA 汽車 LED 大燈</h3>
+            <p>
+              2024年，我們正式推出 SUPER KINTA 汽車 LED 大燈品牌，持續投入研發，確保技術與產品領先行業。
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-content">
+            <h3>未來展望</h3>
+            <p>
+              2025年，展望未來，我們將繼續堅持創新，不斷優化產品與服務，致力為客戶創造更卓越的價值。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ 區塊 (手風琴效果) -->
+    <section id="faq">
+      <h2>常見問題</h2>
+      <div class="faq-item">
+        <h3>1. 誰可以觀看安裝教學？</h3>
+        <p>本教學僅提供給台中新動力購買記錄的客戶，觀看前需輸入正確密碼驗證身份。</p>
+      </div>
+      <div class="faq-item">
+        <h3>2. 如果密碼輸入錯誤怎麼辦？</h3>
+        <p>請再次確認您輸入的密碼是否正確；若多次錯誤，請立即聯絡客服以獲取協助。</p>
+      </div>
+      <div class="faq-item">
+        <h3>3. 影片無法播放時該如何處理？</h3>
+        <p>請嘗試更換瀏覽器或檢查網路連線；如仍無法播放，請聯絡技術支援。</p>
+      </div>
     </div>
-
-    <script>
-        let tutorialLinks = {
-            'D1S-D3S-卡榫': 'https://youtube.com/shorts/2_HlMMdRj9E',
-            'D1S-D3S-黑盒固定': 'https://youtube.com/shorts/7yP3Gm7smik',
-            'D2S-D4S-閃光效果': 'https://youtube.com/shorts/qsLY1Qcv58c',
-            'D1S-D3S-有卡扣': 'https://youtube.com/shorts/uDQ03F1ONeA',
-            'D1S-D3S-無卡扣': 'https://youtube.com/shorts/Ruxc1O3FkZc',
-            'D1S-D3S-黑色卡扣': 'https://youtu.be/6v-D_15E0D0',
-            'D2S-D4S-通用教學': 'https://youtu.be/1JV3Wg6Syhs',
-            'D1S-D3S-特殊卡蓋': 'https://youtu.be/RJu0Tt1HmxQ',
-            'D1S-D3S-拆掉小卡扣': 'https://youtube.com/shorts/9iQIvySsFPg',
-            'D1S-D3S-卡榫外': 'https://youtube.com/shorts/2_HlMMdRj9E'
-        };
-
-        let passwords = {
-            'D1S-D3S-卡榫': 'kBnByS7KDA',
-            'D1S-D3S-黑盒固定': 'CD2RqS523u',
-            'D2S-D4S-閃光效果': 'B3PUnNsNdA',
-            'D1S-D3S-有卡扣': 'X8atZh7yr5',
-            'D1S-D3S-無卡扣': 'vdEpbkgvyQ',
-            'D1S-D3S-黑色卡扣': 'Cm26Dr6k92',
-            'D2S-D4S-通用教學': 'mwtT9EVFB9',
-            'D1S-D3S-特殊卡蓋': 'GV3pmTftx2',
-            'D1S-D3S-拆掉小卡扣': 'hempqH6fWT',
-            'D1S-D3S-卡榫外': 'H3aFyzyRvx'
-        };
-
-        function openPasswordEntry(type) {
-            document.getElementById('tutorialType').innerText = type;
-            document.getElementById('passwordModal').style.display = 'block';
-        }
-
-        function closePasswordModal() {
-            document.getElementById('passwordModal').style.display = 'none';
-        }
-
-        function closeCustomAlertModal() {
-            document.getElementById('customAlertModal').style.display = 'none';
-        }
-
-        function checkPassword() {
-            let type = document.getElementById('tutorialType').innerText;
-            let password = document.getElementById('password').value;
-
-            if (password === passwords[type]) {
-                window.open(tutorialLinks[type], '_blank');
-                closePasswordModal(); // 關閉模態對話框
-            } else {
-                alert('密碼錯誤 請重新輸入【有疑慮請聊聊詢問Thx】');
-            }
-        }
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          // 禁止右鍵菜單
-          document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            showModal('右鍵菜單已被禁用。');
-          });
+    <div class="faq-item">
+      <h3>4.為什麼我的卡榫無法精準安裝？</h3>
+      <p>我們有附上一個卡扣工具，讓您安裝卡扣簡單快速。</p>
+    </div>
+    </div>
+    <div class="faq-item">
+      <h3>5.請問什麼角度才是最佳光行？</h3>
+      <p>安裝完畢後，請確保燈泡主體連結出來的線 【垂直90度】才是最佳照射效果！【內附卡扣工具 提升安裝容易度】</p>
+    </div>
+    </section>
     
-          document.addEventListener('keydown', function(e) {
-            const message = '禁止訪問開發者工具。【SUPER KINTA. 保留所有權利，盜用必究。】';
-            // 禁用 F12
-            if (e.code === 'F12') {
-              e.preventDefault();
-              showModal(message);
-              return;
-            }
+    <!-- 聯絡我們 區塊 (全新設計) -->
+    <section id="contact">
+      <div class="contact-container">
+        <h2>聯繫我們</h2>
+        <p>若您在安裝過程中有任何疑問或需要進一步協助，歡迎透過以下方式與我們聯絡：</p>
+        <ul>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:superkinta.led@gmail.com">superkinta.led@gmail.com</a></li>
+          <i class="fas fa-shopping-cart"></i><a href="https://shopee.tw/elisa668" target="_blank" rel="noopener noreferrer">蝦皮【台中新動力 聊聊詢問】</a>
+        </ul>
+      </div>
+    </section>
+  </main>
+  
+  <!-- =====================================
+       頁尾
+  ===================================== -->
+  <footer>
+    <p>&copy; 2025 台中新動力 SUPER KINTA. All Rights Reserved.</p>
+  </footer>
+  
+  <!-- =====================================
+       Modal 區塊 (密碼輸入 & 自訂警告)
+  ===================================== -->
+  <div id="passwordModal" class="modal-overlay">
+    <div class="modal">
+      <span class="close" onclick="closePasswordModal()">&times;</span>
+      <h2>請輸入密碼以觀看 <span id="tutorialType"></span> 教學</h2>
+      <input type="password" id="password" placeholder="請輸入密碼">
+      <button onclick="checkPassword()">提交</button>
+    </div>
+  </div>
+  
+  <div id="customAlertModal" class="modal-overlay">
+    <div class="modal">
+      <span class="close" onclick="closeCustomAlertModal()">&times;</span>
+      <p id="modalMessage"></p>
+    </div>
+  </div>
+  
+  <!-- =====================================
+       JavaScript 區塊
+         1. 粒子特效 (Canvas) – 加入滑鼠互動效果，且降低移動速度
+         2. 打字機效果
+         3. 滾動揭露效果（含一般區塊與時間軸項目）
+         4. FAQ 手風琴效果
+         5. 安裝教學密碼驗證及防護機制
+         6. 禁用右鍵與開發者工具快捷鍵
+         7. 自動偵測裝置並調整縮放比例
+  ===================================== -->
+  <script>
+    /* --------------- 粒子特效 (Canvas) --------------- */
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    const particleCount = 120;
+    const maxDistance = 120;
     
-            // 禁用 Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
-            if (e.ctrlKey && e.shiftKey && ['KeyI', 'KeyJ', 'KeyC'].includes(e.code)) {
-              e.preventDefault();
-              showModal(message);
-              return;
-            }
-    
-            // 禁用 Ctrl+U
-            if (e.ctrlKey && e.code === 'KeyU') {
-              e.preventDefault();
-              showModal(message);
-              return;
-            }
-          });
-    
-          function showModal(message) {
-            document.getElementById('modalMessage').innerText = message;
-            document.getElementById('customAlertModal').style.display = 'flex';
-          }
-    
-          window.showModal = showModal;
-          window.closeCustomAlertModal = closeCustomAlertModal;
-          
-          function adjustView() {
-            let device = navigator.userAgent;
-            if (/android/i.test(device)) {
-                document.body.style.zoom = "0.8";
-            } else if (/iPhone|iPad|iPod/i.test(device)) {
-                document.body.style.zoom = "0.85";
-            } else {
-                document.body.style.zoom = "1.0";
-            }
-        }
-
-        adjustView();
-        window.addEventListener('resize', adjustView);
+    // 取得滑鼠位置，初始化為 null
+    let mouseX = null, mouseY = null;
+    document.addEventListener('mousemove', function(e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
     });
-</script>
+    
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        // 將速度乘數從 1.5 調整為 1.0，使粒子移動更緩慢
+        this.vx = (Math.random() - 0.5) * 1.0;
+        this.vy = (Math.random() - 0.5) * 1.0;
+        this.size = Math.random() * 2 + 1;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
+        if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
+        // 滑鼠互動：當滑鼠靠近時產生排斥效果
+        if (mouseX !== null && mouseY !== null) {
+          const dx = this.x - mouseX;
+          const dy = this.y - mouseY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100) {
+            const force = (100 - dist) / 100 * 0.2;
+            this.vx += (dx / dist) * force;
+            this.vy += (dy / dist) * force;
+          }
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+        ctx.fill();
+      }
+    }
+    function initParticles() {
+      particles = [];
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+    initParticles();
+    function connectParticles() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < maxDistance) {
+            ctx.strokeStyle = `rgba(255, 255, 255, ${1 - distance / maxDistance})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      connectParticles();
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+    
+    /* --------------- 打字機效果 --------------- */
+    const heroTitle = document.getElementById('hero-title');
+    const heroTagline = document.getElementById('hero-tagline');
+    const titleText = "台中新動力 SUPER KINTA LED 安裝教學";
+    const taglineText = "專業的品質，值得您的信賴";
+    let titleIndex = 0, taglineIndex = 0;
+    function typeTitle() {
+      if (titleIndex < titleText.length) {
+        heroTitle.textContent += titleText.charAt(titleIndex);
+        titleIndex++;
+        setTimeout(typeTitle, 100);
+      }
+    }
+    function typeTagline() {
+      if (taglineIndex < taglineText.length) {
+        heroTagline.textContent += taglineText.charAt(taglineIndex);
+        taglineIndex++;
+        setTimeout(typeTagline, 100);
+      }
+    }
+    setTimeout(() => {
+      typeTitle();
+      setTimeout(typeTagline, 800);
+    }, 500);
+    
+    /* --------------- 滾動揭露效果 --------------- */
+    const sections = document.querySelectorAll('main section');
+    function revealSections() {
+      const triggerPoint = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        if (section.getBoundingClientRect().top < triggerPoint) {
+          section.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealSections);
+    revealSections();
+    
+    /* --------------- 時間軸項目揭露效果 --------------- */
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    function revealTimelineItems() {
+      const trigger = window.innerHeight * 0.85;
+      timelineItems.forEach(item => {
+        if (item.getBoundingClientRect().top < trigger) {
+          item.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealTimelineItems);
+    revealTimelineItems();
+    
+    /* --------------- FAQ 手風琴效果 --------------- */
+    document.querySelectorAll('.faq-item h3').forEach(item => {
+      item.addEventListener('click', function() {
+        this.parentElement.classList.toggle('active');
+      });
+    });
+    
+    /* --------------- 安裝教學密碼驗證及防護機制 --------------- */
+    const tutorialLinks = {
+      'D1S-D3S-卡榫': 'https://youtube.com/shorts/2_HlMMdRj9E',
+      'D1S-D3S-黑盒固定': 'https://youtube.com/shorts/7yP3Gm7smik',
+      'D2S-D4S-閃光效果': 'https://youtube.com/shorts/qsLY1Qcv58c',
+      'D1S-D3S-有卡扣': 'https://youtube.com/shorts/uDQ03F1ONeA',
+      'D1S-D3S-無卡扣': 'https://youtube.com/shorts/Ruxc1O3FkZc',
+      'D1S-D3S-黑色卡扣': 'https://youtu.be/6v-D_15E0D0',
+      'D2S-D4S-通用教學': 'https://youtu.be/1JV3Wg6Syhs',
+      'D1S-D3S-特殊卡蓋': 'https://youtu.be/RJu0Tt1HmxQ',
+      'D1S-D3S-拆掉小卡扣': 'https://youtube.com/shorts/9iQIvySsFPg',
+      'D1S-D3S-卡榫外': 'https://youtube.com/shorts/2_HlMMdRj9E'
+  };
+    const passwords = {
+      'D1S-D3S-卡榫': 'kBnByS7KDA',
+      'D1S-D3S-黑盒固定': 'CD2RqS523u',
+      'D2S-D4S-閃光效果': 'B3PUnNsNdA',
+      'D1S-D3S-有卡扣': 'X8atZh7yr5',
+      'D1S-D3S-無卡扣': 'vdEpbkgvyQ',
+      'D1S-D3S-黑色卡扣': 'Cm26Dr6k92',
+      'D2S-D4S-通用教學': 'mwtT9EVFB9',
+      'D1S-D3S-特殊卡蓋': 'GV3pmTftx2',
+      'D1S-D3S-拆掉小卡扣': 'hempqH6fWT',
+      'D1S-D3S-卡榫外': 'H3aFyzyRvx'
+  };
+
+    let currentTutorial = "";
+    
+    function openPasswordEntry(type) {
+      currentTutorial = type;
+      document.getElementById('tutorialType').textContent = type;
+      document.getElementById('password').value = "";
+      document.getElementById('passwordModal').style.display = "flex";
+    }
+    
+    function closePasswordModal() {
+      document.getElementById('passwordModal').style.display = "none";
+    }
+    
+    function closeCustomAlertModal() {
+      document.getElementById('customAlertModal').style.display = "none";
+    }
+    
+    function checkPassword() {
+      const inputPassword = document.getElementById('password').value;
+      if (inputPassword === passwords[currentTutorial]) {
+        window.open(tutorialLinks[currentTutorial], "_blank");
+        closePasswordModal();
+      } else {
+        showAlert("密碼錯誤，請重新輸入【有疑慮請聊聊詢問Thx】");
+      }
+    }
+    
+    function showAlert(message) {
+      document.getElementById('modalMessage').textContent = message;
+      document.getElementById('customAlertModal').style.display = "flex";
+      setTimeout(() => { closeCustomAlertModal(); }, 2000);
+    }
+    
+    // 禁用右鍵及部分開發者工具快捷鍵
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      showAlert("右鍵功能已禁用");
+    });
+    
+    document.addEventListener('keydown', function(e) {
+      if (e.code === 'F12' || 
+          (e.ctrlKey && e.shiftKey && ['KeyI', 'KeyJ', 'KeyC'].includes(e.code)) || 
+          (e.ctrlKey && e.code === 'KeyU')) {
+        e.preventDefault();
+        showAlert("禁止訪問開發者工具");
+      } else if (e.ctrlKey && e.code === 'KeyC') {
+        e.preventDefault();
+        showAlert("禁止複製");
+      }
+    });
+    
+    
+    // 自動偵測裝置並調整縮放比例
+    function adjustZoom() {
+      const ua = navigator.userAgent;
+      if (/iPhone|iPod/i.test(ua)) {
+        document.body.style.zoom = "0.95";
+      } else if (/iPad/i.test(ua)) {
+        document.body.style.zoom = "0.9";
+      } else if (/android/i.test(ua)) {
+        document.body.style.zoom = "0.9";
+      } else {
+        document.body.style.zoom = "1";
+      }
+    }
+    adjustZoom();
+    window.addEventListener('resize', adjustZoom);
+  </script>
 </body>
 </html>
